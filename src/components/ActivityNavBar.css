@@ -1,0 +1,15 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+#navbar {
+  background-color: rgba(189, 141, 182, 0.514);
+  height: 5em;
+  text-align: center;
+  justify-content: center;
+  font-size: 10px;
+  padding-top: 12px;
+}
+.btn-btn-primary {
+  font-size: 20px;
+}

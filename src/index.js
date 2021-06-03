@@ -1,5 +1,7 @@
-// import React, { useState, useEffect } from "react";
-// import ReactDOM from "react-dom";
+import React from "react";
+import ReactDOM from "react-dom";
+import { BrowserRouter } from "react-router-dom";
+import App from "./App.js";
 
 // import {
 //   BrowserRouter as Router,
@@ -8,4 +10,11 @@
 //   Redirect,
 // } from "react-router-dom";
 
-// ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(
+  <BrowserRouter>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </BrowserRouter>,
+  document.getElementById("root")
+);

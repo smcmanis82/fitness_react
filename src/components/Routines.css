@@ -1,0 +1,26 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+#routines-container {
+  background-color: #630330;
+  /* padding: 15px; */
+  /* margin-bottom: 10px; */
+
+  grid-template-columns: repeat(6, 1fr);
+  display: grid;
+  grid-auto-rows: auto;
+  grid-gap: 2rem;
+}
+
+.routine-cards {
+  background-color: #fcd7e9;
+  margin: 5px;
+  padding: 15px;
+  border-radius: 2%;
+  width: 14rem;
+  /* height: 14rem; */
+}
+/* .card-name {
+  text-align: center;
+} */
