@@ -5,6 +5,8 @@
 }
 
 h1 {
-  color: black;
+  color: white;
   padding-left: 15px;
+  background-color: #110c14;
+  text-align: center;
 }
