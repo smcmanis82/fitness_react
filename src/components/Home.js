@@ -1,5 +1,4 @@
 import React from "react";
-// import Image from "react-image-file-resizer";
 import "./Home.css";
 import fitness from "./images/fitness.jpg";
 

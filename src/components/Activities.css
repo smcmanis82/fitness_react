@@ -1,22 +1,8 @@
-* {
-  padding: 0;
-  margin: 0;
+#activity-description {
+  font-weight: bold;
+  background-color: rgb(96, 147, 223);
 }
-#activities-container {
-  background-color: #6082b6;
-  /* padding: 15px; */
-  /* margin-bottom: 10px; */
-
-  grid-template-columns: repeat(7, 1fr);
-  display: grid;
-  grid-auto-rows: auto;
-  grid-gap: 2rem;
-}
-
-.activity-cards {
-  background-color: white;
-  margin: 6px;
-  padding: 15px;
-  border-radius: 2%;
-  width: 14rem;
+#activity-name {
+  font-weight: bold;
+  background-color: rgb(96, 147, 223);
 }

@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { TextField, Button } from "@material-ui/core";
 import axios from "axios";
 import { HOME_ROUTE } from "../constants";
+import "./Login.css";
 
 const BASE = "https://fitnesstrac-kr.herokuapp.com/api";
 
@@ -19,7 +20,7 @@ const Login = () => {
       .then(({ data: { token } }) => {
         if (token) {
           localStorage.setItem("token", JSON.stringify(token));
-          window.location.href = `${window.location.orgin}${HOME_ROUTE}`;
+          window.location.href = `${HOME_ROUTE}`;
         } else {
           setErrorMessage("Invalid Username or Password");
         }

@@ -5,3 +5,7 @@
 .my-routine {
   float: left;
 }
+#bold {
+  font-weight: bold;
+  background-color: rgb(96, 147, 223);
+}

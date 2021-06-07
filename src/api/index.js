@@ -28,27 +28,3 @@ export async function updateActivity(id) {
     throw error;
   }
 }
-
-// export async function createRoutine(name, goal) {
-//   try {
-//     const myToken = JSON.parse(localStorage.getItem("token"));
-
-//     const response = await fetch(`${BASE}/routines`, {
-//       method: "POST",
-//       headers: {
-//         "Content-Type": "application/json",
-//         Authorization: `Bearer ${myToken}`,
-//       },
-//       body: JSON.stringify({
-//         name,
-//         goal,
-//         isPublic: true,
-//       }),
-//     });
-
-//     const data = await response.json();
-//     return data;
-//   } catch (error) {
-//     console.log(error);
-//   }
-// }

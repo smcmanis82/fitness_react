@@ -1,25 +1,19 @@
-import React, { useEffect, useState } from "react";
-
+import React from "react";
 import { Route } from "react-router-dom";
-import Routines from "./Routines";
-import Home from "./Home";
 import Activities from "./Activities";
-import CreateRoutineForm from "./CreateRoutine";
 import CreateActivityForm from "./CreateActivity";
-// import Login from "./Login"
-import Register from "./Register";
-
+import CreateRoutineForm from "./CreateRoutine";
+import Home from "./Home";
+import MyRoutines from "./MyRoutines";
+import Routines from "./Routines";
 import {
   ACTIVITIES_ROUTE,
-  HOME_ROUTE,
-  ROUTINES_ROUTE,
-  MY_ROUTINES_ROUTE,
   CREATE_ACTIVITY_ROUTE,
   CREATE_ROUTINE_ROUTE,
-  LOGIN_ROUTE,
-  REGISTER_ROUTE,
+  HOME_ROUTE,
+  MY_ROUTINES_ROUTE,
+  ROUTINES_ROUTE,
 } from "../constants";
-import MyRoutines from "./MyRoutines";
 
 const Pages = (props) => {
   const { routines, setRoutines, activities, setActivities } = props;
@@ -32,7 +26,7 @@ const Pages = (props) => {
         <Routines routines={routines} setRoutines={setRoutines} />
       </Route>
       <Route path={MY_ROUTINES_ROUTE}>
-        <h1>My Routine</h1>
+        <h1>My Routines</h1>
         <MyRoutines />
       </Route>
       <Route path={CREATE_ROUTINE_ROUTE}>
@@ -52,14 +46,6 @@ const Pages = (props) => {
       <Route path={ACTIVITIES_ROUTE}>
         <Activities activities={activities} setActivities={setActivities} />
       </Route>
-      {/* <Route path={REGISTER_ROUTE}>
-        <h1>Register</h1>
-        <Register />
-      </Route>
-      <Route path={LOGIN_ROUTE}>
-        <h1>Login</h1>
-        <Login />
-      </Route> */}
     </>
   );
 };

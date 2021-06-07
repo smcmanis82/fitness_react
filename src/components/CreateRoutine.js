@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import RoutineNavBar from "./RoutineNavBar";
-import { Link } from "react-router-dom";
-import "./CreateRoutine.css";
 import { TextField, Button } from "@material-ui/core";
+import "./CreateRoutine.css";
+
 const BASE = "https://fitnesstrac-kr.herokuapp.com/api";
 
 const CreateRoutineForm = () => {
@@ -58,6 +57,7 @@ const CreateRoutineForm = () => {
             setGoal(event.target.value);
           }}
         />
+
         <Button type="submit">Submit</Button>
       </form>{" "}
     </>

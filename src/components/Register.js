@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { TextField, Button } from "@material-ui/core";
 import axios from "axios";
 import { HOME_ROUTE } from "../constants";
+import "./Register.css";
 
 const BASE = "https://fitnesstrac-kr.herokuapp.com/api";
 

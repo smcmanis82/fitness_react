@@ -1,23 +1,12 @@
-import "./App.css";
 import React, { useState, useEffect } from "react";
-import { Button } from "@material-ui/core";
-import { Redirect, Route } from "react-router-dom";
-import {
-  Activities,
-  Header,
-  Routines,
-  RoutineNavBar,
-  ActivityNavBar,
-  MyRoutines,
-  Pages,
-  CreateRoutine,
-  CreateActivity,
-} from "./components";
-// import Pages from "./Pages";
+import { Route } from "react-router-dom";
+import { Header, Pages } from "./components";
+
 import { LOGIN_ROUTE, REGISTER_ROUTE } from "./constants";
 import Register from "./components/Register";
 import Login from "./components/Login";
-import { getRoutines, getActivities } from "./api";
+
+import "./App.css";
 
 const App = () => {
   const [auth, setAuth] = useState(false);
@@ -47,14 +36,12 @@ const App = () => {
   return (
     <div className="App">
       <Header />
-
       <Pages
         routines={routines}
         setRoutines={setRoutines}
         activities={activities}
         setActivities={setActivities}
       />
-
       <Route path={REGISTER_ROUTE}>
         <h1>Register</h1>
         <Register />
@@ -63,17 +50,6 @@ const App = () => {
         <h1>Login</h1>
         <Login />
       </Route>
-
-      {/* {auth && <MyRoutines />} */}
-      {/* {!auth && <Redirect to={LOGIN_ROUTE} />} */}
-      {/* {$auth && } */}
-      {/* <Activities /> */}
-
-      {/* <Login /> */}
-
-      {/* <Routines /> */}
-      {/* <h1> My App!</h1> */}
-      {/* <Footer /> */}
     </div>
   );
 };

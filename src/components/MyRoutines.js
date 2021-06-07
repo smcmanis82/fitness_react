@@ -74,14 +74,25 @@ const MyRoutines = () => {
         <Table>
           <TableHead>
             <TableRow>
-              <TableCell align="right">ID</TableCell>
-              <TableCell align="right">Name</TableCell>
-              <TableCell align="right">Goal</TableCell>
-              <TableCell align="right">Creator Name</TableCell>
-              {/* <TableCell align="right">Is Public</TableCell> */}
-              <TableCell align="right"></TableCell>
-              <TableCell align="right">Edit</TableCell>
-              <TableCell align="right">Delete</TableCell>
+              <TableCell id="bold" align="right">
+                ID
+              </TableCell>
+              <TableCell id="bold" align="right">
+                Name
+              </TableCell>
+              <TableCell id="bold" align="right">
+                Goal
+              </TableCell>
+              <TableCell id="bold" align="right">
+                Creator Name
+              </TableCell>
+              <TableCell id="bold" align="right"></TableCell>
+              <TableCell id="bold" align="right">
+                Edit
+              </TableCell>
+              <TableCell id="bold" align="right">
+                Delete
+              </TableCell>
             </TableRow>
           </TableHead>
           <TableBody>

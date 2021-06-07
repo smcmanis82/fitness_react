@@ -1,43 +1,12 @@
-/* #header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-
-  font-family: Arial, Helvetica, sans-serif, sans-serif;
-  font-size: 16px;
-
-  background: rgb(88, 155, 111);
-  padding: 1em;
-}
-
-#header h1 {
-  font-size: 2.4em;
-  color: white;
-  text-shadow: 1px 1px 3px black;
-} */
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
-/* .logo {
-  color: rgb(5, 34, 34);
-  font-size: 35px;
-  padding: 0px 15px;
-  text-shadow: white 1px 2px;
-  text-align: center;
-  justify-content: center;
-  padding-top: 15px;
-  display: flex;
-  float: center;
-} */
-
 .loggedIn {
   overflow: hidden;
   background-color: #ffc000;
   height: 100%;
 }
-
 .loggedIn a {
   float: left;
   color: black;
@@ -47,6 +16,17 @@ body {
   padding: 34px 20px 30px;
   text-decoration: none;
   font-size: 20px;
+  height: 100%;
+}
+.loggedIn a:hover {
+  background-color: white;
+  color: black;
+  height: 100%;
+}
+
+.loggedIn a.active {
+  background-color: #e4e2e2;
+  color: white;
   height: 100%;
 }
 
@@ -66,6 +46,11 @@ body {
   font-size: 20px;
   height: 100%;
 }
+.loggedOut a:hover {
+  background-color: white;
+  color: black;
+  height: 100%;
+}
 #logout-button {
   font-size: 20px;
   text-align: center;
@@ -75,24 +60,6 @@ body {
   display: block;
   float: right;
 }
-/* #logout-button a:hover {
-  background-color: white;
-  color: black;
-  height: 100%;
-} */
-
-.loggedIn a:hover {
-  background-color: white;
-  color: black;
-  height: 100%;
-}
-
-.loggedIn a.active {
-  /* background-color: #915c6d; */
-  /* color: white; */
-  height: 100%;
-}
-
-.admin {
+#admin {
   float: right;
 }

@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import RoutineNavBar from "./RoutineNavBar";
 import { TextField, Button } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import "./CreateActivity.css";
+
 const BASE = "https://fitnesstrac-kr.herokuapp.com/api";
 
 const CreateActivityForm = () => {
@@ -35,7 +36,12 @@ const CreateActivityForm = () => {
   };
   return (
     <>
-      <form noValidate autoComplete="off" onSubmit={onFormSubmit}>
+      <form
+        noValidate
+        autoComplete="off"
+        id="activity-form"
+        onSubmit={onFormSubmit}
+      >
         <TextField
           id="name"
           label="Name"

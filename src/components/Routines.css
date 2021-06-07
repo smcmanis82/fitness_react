@@ -1,26 +1,4 @@
-* {
-  padding: 0;
-  margin: 0;
+#bold {
+  font-weight: bold;
+  background-color: rgb(96, 147, 223);
 }
-#routines-container {
-  background-color: #6082b6;
-  /* padding: 15px; */
-  /* margin-bottom: 10px; */
-
-  grid-template-columns: repeat(6, 1fr);
-  display: grid;
-  grid-auto-rows: auto;
-  grid-gap: 2rem;
-}
-
-.routine-cards {
-  background-color: white;
-  margin: 5px;
-  padding: 15px;
-  border-radius: 2%;
-  width: 14rem;
-  /* height: 14rem; */
-}
-/* .card-name {
-  text-align: center;
-} */

@@ -12,4 +12,14 @@
 }
 .btn-btn-primary {
   font-size: 20px;
+
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  justify-content: center;
+}
+.btn-btn-primary:hover {
+  background-color: #ffc000;
+  color: black;
+  height: 100%;
 }
