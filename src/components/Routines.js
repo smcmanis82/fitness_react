@@ -9,13 +9,13 @@ import {
   TableCell,
   TableBody,
 } from "@material-ui/core";
-
 import "./Routines.css";
 
 const BASE = "https://fitnesstrac-kr.herokuapp.com/api";
 
 const Routines = ({ routines, setRoutines }) => {
   const [activities, setActivities] = useState();
+
   useEffect(() => {
     getRoutines()
       .then((routine) => {
@@ -33,16 +33,15 @@ const Routines = ({ routines, setRoutines }) => {
         <Table>
           <TableHead>
             <TableRow>
-              <TableCell align="right" id="bold">
+              <TableCell align="left" id="bold">
                 Routine Name
               </TableCell>
-              <TableCell align="center" id="bold">
+              <TableCell align="right" id="bold">
                 Activities
               </TableCell>
               <TableCell align="right" id="bold">
                 Goal
               </TableCell>
-
               <TableCell align="right" id="bold">
                 Creator
               </TableCell>
@@ -52,9 +51,8 @@ const Routines = ({ routines, setRoutines }) => {
             {routines.map((routine) => {
               return (
                 <TableRow key={routine.name}>
-                  <TableCell align="right">{routine.name}</TableCell>
-
-                  <TableCell align="center">
+                  <TableCell align="left">{routine.name}</TableCell>
+                  <TableCell align="right">
                     {routine.activities.map(
                       ({
                         id,
@@ -66,15 +64,13 @@ const Routines = ({ routines, setRoutines }) => {
                         routineId,
                       }) => (
                         <p key={id}>
-                          Name:{name}
-                          <p key={description}>Description: {description}</p>
-                          <p key={duration}>Duration: {duration}</p>
-                          <p key={count}>Count: {count}</p>
+                          Name:{name},Description:{description},Count:{count},
+                          Duration:
+                          {duration}
                         </p>
                       )
                     )}
                   </TableCell>
-
                   <TableCell align="right">{routine.goal}</TableCell>
                   <TableCell align="right">{routine.creatorName}</TableCell>
                 </TableRow>

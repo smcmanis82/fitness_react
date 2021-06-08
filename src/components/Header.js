@@ -1,5 +1,4 @@
 import React from "react";
-
 import { Link } from "react-router-dom";
 import {
   ACTIVITIES_ROUTE,
@@ -11,16 +10,15 @@ import {
   CREATE_ACTIVITY_ROUTE,
   CREATE_ROUTINE_ROUTE,
 } from "../constants";
-
 import "./Header.css";
 
 const Header = () => {
   const myToken = JSON.parse(localStorage.getItem("token"));
   const logOut = () => {
     if (!myToken) {
-      window.location.href = "/home";
+      window.location.href = `${HOME_ROUTE}`;
     } else {
-      window.location.href = "/home";
+      window.location.href = `${HOME_ROUTE}`;
     }
   };
   if (myToken) {

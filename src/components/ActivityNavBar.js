@@ -1,7 +1,6 @@
 import React from "react";
 import { CREATE_ACTIVITY_ROUTE } from "../constants";
 import { Link } from "react-router-dom";
-
 import "./ActivityNavBar.css";
 
 const ActivityNavBar = () => {

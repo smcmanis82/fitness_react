@@ -20,7 +20,7 @@ const Register = () => {
       .then(({ data: { token } }) => {
         if (token) {
           localStorage.setItem("token", JSON.stringify(token));
-          window.location.href = `${window.location.orgin}${HOME_ROUTE}`;
+          window.location.href = `${HOME_ROUTE}`;
         } else {
           setErrorMessage("Invalid Username or Password");
         }

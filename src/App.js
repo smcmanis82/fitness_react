@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Route } from "react-router-dom";
 import { Header, Pages } from "./components";
-
 import { LOGIN_ROUTE, REGISTER_ROUTE } from "./constants";
 import Register from "./components/Register";
 import Login from "./components/Login";
-
 import "./App.css";
 
 const App = () => {

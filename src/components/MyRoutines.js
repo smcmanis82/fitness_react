@@ -9,8 +9,10 @@ import {
   TableCell,
   TableBody,
 } from "@material-ui/core";
+import CreateRoutineForm from "./CreateRoutine";
 import RoutineRow from "./RoutineRow";
 import RoutineNavBar from "./RoutineNavBar";
+import "./MyRoutines.css";
 
 const BASE = "https://fitnesstrac-kr.herokuapp.com/api";
 
@@ -51,6 +53,11 @@ const myRoutinesFetch = (username, myToken) => {
 const MyRoutines = () => {
   let myUsername;
   const [myRoutines, setMyRoutines] = useState([]);
+  const copy = [...myRoutines];
+  const onRemoveRoutine = (idx) => {
+    copy.splice(idx, 1);
+    setMyRoutines(copy);
+  };
 
   useEffect(async () => {
     const myToken = JSON.parse(localStorage.getItem("token"));
@@ -61,57 +68,58 @@ const MyRoutines = () => {
     }
   }, []);
 
-  const onRemoveRoutine = (idx) => {
-    const copy = [...myRoutines];
-    copy.splice(idx, 1);
-    setMyRoutines(copy);
-  };
-
-  return (
-    <>
-      <RoutineNavBar />
-      <TableContainer component={Paper}>
-        <Table>
-          <TableHead>
-            <TableRow>
-              <TableCell id="bold" align="right">
-                ID
-              </TableCell>
-              <TableCell id="bold" align="right">
-                Name
-              </TableCell>
-              <TableCell id="bold" align="right">
-                Goal
-              </TableCell>
-              <TableCell id="bold" align="right">
-                Creator Name
-              </TableCell>
-              <TableCell id="bold" align="right"></TableCell>
-              <TableCell id="bold" align="right">
-                Edit
-              </TableCell>
-              <TableCell id="bold" align="right">
-                Delete
-              </TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {myRoutines.map((routine, idx) => {
-              return (
-                <RoutineRow
-                  key={routine.id}
-                  routine={routine}
-                  onRemoveRoutine={() => {
-                    onRemoveRoutine(idx);
-                  }}
-                />
-              );
-            })}
-          </TableBody>
-        </Table>
-      </TableContainer>
-    </>
-  );
+  if (copy.length > 0) {
+    return (
+      <>
+        <RoutineNavBar />
+        <TableContainer component={Paper}>
+          <Table>
+            <TableHead>
+              <TableRow>
+                <TableCell id="bold" align="left">
+                  ID
+                </TableCell>
+                <TableCell id="bold" align="right">
+                  Name
+                </TableCell>
+                <TableCell id="bold" align="right">
+                  Goal
+                </TableCell>
+                <TableCell id="bold" align="right">
+                  Creator Name
+                </TableCell>
+                <TableCell id="bold" align="right">
+                  Add Activity
+                </TableCell>
+                <TableCell id="bold" align="right"></TableCell>
+                <TableCell id="bold" align="right">
+                  Edit
+                </TableCell>
+                <TableCell id="bold" align="right">
+                  Delete
+                </TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {myRoutines.map((routine, idx) => {
+                return (
+                  <RoutineRow
+                    key={routine.id}
+                    routine={routine}
+                    onRemoveRoutine={() => {
+                      onRemoveRoutine(idx);
+                    }}
+                  />
+                );
+              })}
+            </TableBody>
+          </Table>
+        </TableContainer>
+      </>
+    );
+  } else {
+    return <CreateRoutineForm />;
+  }
 };
 
 export default MyRoutines;

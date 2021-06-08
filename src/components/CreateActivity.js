@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
-import RoutineNavBar from "./RoutineNavBar";
+import React, { useState } from "react";
 import { TextField, Button } from "@material-ui/core";
-import { Link } from "react-router-dom";
+import { HOME_ROUTE } from "../constants";
 import "./CreateActivity.css";
 
 const BASE = "https://fitnesstrac-kr.herokuapp.com/api";
@@ -27,13 +26,14 @@ const CreateActivityForm = () => {
       .then((result) => {
         console.log(result);
       })
-      .catch(console.error);
+      .catch("Activity already exists");
   };
 
   const onFormSubmit = (event) => {
     event.preventDefault();
     CreateActivity();
   };
+
   return (
     <>
       <form
@@ -57,7 +57,7 @@ const CreateActivityForm = () => {
           }}
         />
         <Button type="submit">Submit</Button>
-      </form>{" "}
+      </form>
     </>
   );
 };
