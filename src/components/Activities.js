@@ -12,7 +12,7 @@ import {
 } from "@material-ui/core";
 import "./Activities.css";
 
-const BASE = "https://fitnesstrac-kr.herokuapp.com/api";
+// const BASE = "https://fitnesstrac-kr.herokuapp.com/api";
 
 const Activities = () => {
   const [activities, setActivities] = useState();

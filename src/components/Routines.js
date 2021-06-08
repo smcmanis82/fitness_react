@@ -11,7 +11,7 @@ import {
 } from "@material-ui/core";
 import "./Routines.css";
 
-const BASE = "https://fitnesstrac-kr.herokuapp.com/api";
+// const BASE = "https://fitnesstrac-kr.herokuapp.com/api";
 
 const Routines = ({ routines, setRoutines }) => {
   const [activities, setActivities] = useState();
